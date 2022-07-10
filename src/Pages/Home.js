@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       {}
       <h1>Home</h1>
-      <h1>{isLogin}</h1>
+      <h1>isLogin:{isLogin ? "true" : "false"}</h1>
     </div>
   );
 };

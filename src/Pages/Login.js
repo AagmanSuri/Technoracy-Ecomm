@@ -10,20 +10,20 @@ const Login = () => {
 
   console.log("loc from login", location);
 
-  const signupHandler = async () => {
-    try {
-      const response = await axios.post(`/api/auth/signup`, {
-        firstName: "aagman",
-        lastName: "suri",
-        email: "aagman@gmail.camp",
-        password: "aagman"
-      });
-      console.log(response);
-      localStorage.setItem("token", response.data.encodedToken);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const signupHandler = async () => {
+  //   try {
+  //     const response = await axios.post(`/api/auth/signup`, {
+  //       firstName: "aagman",
+  //       lastName: "suri",
+  //       email: "aagman@gmail.camp",
+  //       password: "aagman"
+  //     });
+  //     console.log(response);
+  //     localStorage.setItem("token", response.data.encodedToken);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const loginHandeler = async () => {
     try {
@@ -38,14 +38,14 @@ const Login = () => {
       console.log(error);
     }
   };
-
+  console.log(isLogin);
   return (
     <div>
       <label>Email:</label>
       <input type="email" />
       <label>Password:</label>
       <input type="password" />
-      <button onClick={signupHandler}>Signup</button>
+      {/* <button onClick={signupHandler}>Signup</button> */}
       <button onClick={loginHandeler}>Login</button>
     </div>
   );
