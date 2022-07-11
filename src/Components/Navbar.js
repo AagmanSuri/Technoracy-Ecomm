@@ -7,10 +7,13 @@ const Navbar = () => {
 
   return (
     <div className="NavContainer">
-      <Link to="/">Technoracy</Link>
-      <input className="search" placeholder="Search" />
+      <Link className="link logo left-shift" to="/">
+        Technoracy
+      </Link>
+      {/* <input className="search" placeholder="Search" /> */}
       {isLogin ? (
         <Link
+          className="link right-shift"
           onClick={() => {
             setIsLogin(false);
             console.log("c");
@@ -20,10 +23,16 @@ const Navbar = () => {
           Logout
         </Link>
       ) : (
-        <Link to="login">Login</Link>
+        <Link className="link right-shift " to="login">
+          Login
+        </Link>
       )}
-      <Link to="wishlist">Wishlist</Link>
-      <Link to="cart">Cart</Link>
+      <Link className="link right-shift " to="wishlist">
+        Wishlist
+      </Link>
+      <Link className="link right-shift-1 " to="cart">
+        Cart
+      </Link>
     </div>
   );
 };

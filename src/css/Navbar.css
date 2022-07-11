@@ -13,3 +13,25 @@
   border: none;
   font-size: larger;
 }
+
+.logo {
+  font-weight: bold;
+}
+
+.link {
+  margin-top: 0.7rem;
+  color: white;
+  text-decoration: none;
+}
+
+.left-shift {
+  margin-left: -10rem;
+}
+
+.right-shift {
+  margin-right: -25rem;
+}
+
+.right-shift-1 {
+  margin-right: -10rem;
+}

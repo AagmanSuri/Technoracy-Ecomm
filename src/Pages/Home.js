@@ -1,21 +1,20 @@
-import React, { useEffect } from "react";
-import { useAuth } from "../Context/authContext";
-import Navbar from "../Components/Navbar";
+import React, { useEffect, useState } from "react";
 import "../css/Home.css";
-import HomeBackground from "../Assets/HomeBackground.jpg";
+
 const Home = () => {
-  // useEffect(() => {
-  //   fetch("/api/categories")
-  //     .then((response) => response.json())
-  //     .then(console.log);
-  // }, []);
-  // const { isLogin, setIsLogin } = useAuth();
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("/api/categories")
+      .then((response) => response.json())
+      .then((db) => setData(db));
+  }, []);
 
   return (
     <div className="container">
       <div class="banner-container">
         <div className="bannerHeading">
-          <h3>Find all your tech accessories here....</h3>
+          <h3>Find all your tech & accessories here....</h3>
         </div>
 
         <img
@@ -24,7 +23,34 @@ const Home = () => {
         ></img>
       </div>
       <div>
-        <button class="browse-product-btn">Browse Products</button>
+        <div className="category-heading center margin-top margin-bottom ">
+          Browse by categories
+        </div>
+      </div>
+      <div className="card-container margin-bottom ">
+        {data?.categories.map((item) => {
+          return (
+            <div
+              onClick={() => {
+                console.log(item);
+              }}
+              className="center "
+            >
+              <div key={item.id} className="card">
+                {/* <h1>{item.categoryName}</h1>
+              <button>Explore more</button> */}
+                <img
+                  class="card-image"
+                  src={item.categoryImage}
+                  alt={item.categoryName}
+                ></img>
+              </div>
+              <div className="category-name">
+                <span>{item.categoryName}</span>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
