@@ -9,11 +9,13 @@ import NotFound from "./Pages/NotFound";
 import RequiresAuth from "./Components/RequiresAuth";
 import { useAuth } from "./Context/authContext";
 import Wishlist from "./Pages/Private/Wishlist";
+import Navbar from "./Components/Navbar";
 function App() {
   const { isLogin, setIsLogin } = useAuth();
 
   return (
-    <div className="App">
+    <div>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mockman" element={<Mockman />} />

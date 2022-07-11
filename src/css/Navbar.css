@@ -1,0 +1,15 @@
+.NavContainer {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  /* background-color: #926a68; */
+  height: 3rem;
+}
+
+.search {
+  background-color: black;
+  /* color: white; */
+  /* border: 0.1px white solid; */
+  border: none;
+  font-size: larger;
+}
