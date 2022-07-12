@@ -1,4 +1,5 @@
 import React from "react";
+import Menu from "../Assets/menu.svg";
 import "../css/Navbar.css";
 import { Link } from "react-router-dom";
 import { useAuth } from "../Context/authContext";
@@ -10,10 +11,13 @@ const Navbar = () => {
       <Link className="link logo left-shift" to="/">
         Technoracy
       </Link>
+      <button class="button ham-btn unhide">
+        <img src={Menu}></img>
+      </button>
       {/* <input className="search" placeholder="Search" /> */}
       {isLogin ? (
         <Link
-          className="link right-shift"
+          className="link hide right-shift"
           onClick={() => {
             setIsLogin(false);
             console.log("c");
@@ -23,14 +27,14 @@ const Navbar = () => {
           Logout
         </Link>
       ) : (
-        <Link className="link right-shift " to="login">
+        <Link className="link hide right-shift " to="login">
           Login
         </Link>
       )}
-      <Link className="link right-shift " to="wishlist">
+      <Link className="link  hide right-shift " to="wishlist">
         Wishlist
       </Link>
-      <Link className="link right-shift-1 " to="cart">
+      <Link className="link hide right-shift-1 " to="cart">
         Cart
       </Link>
     </div>
