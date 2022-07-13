@@ -12,7 +12,13 @@ const Navbar = () => {
 
   return (
     <div className="NavContainer">
-      <Link className="link logo left-shift" to="/">
+      <Link
+        onClick={() => {
+          setisPhoneMenuShow(false);
+        }}
+        className="link logo left-shift"
+        to="/"
+      >
         Technoracy
       </Link>
 
