@@ -36,6 +36,7 @@ const Home = () => {
         {data?.categories.map((item) => {
           return (
             <div
+              key={item.id}
               onClick={() => {
                 console.log(item);
               }}
@@ -45,7 +46,7 @@ const Home = () => {
                 {/* <h1>{item.categoryName}</h1>
               <button>Explore more</button> */}
                 <img
-                  class="card-image"
+                  className="card-image"
                   src={item.categoryImage}
                   alt={item.categoryName}
                 ></img>

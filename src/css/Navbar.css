@@ -47,6 +47,19 @@
   margin-right: -9rem;
 }
 
+.phoneMenuShow {
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  top: -128px;
+  background-color: black;
+  margin-top: 11rem;
+  z-index: 10000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 @media only screen and (max-width: 800px) {
   .hide {
     display: none;
