@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.banner-container {
+  display: flex;
+}
+.background {
+  margin-top: 10rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bannerHeading {
+  margin-top: 8rem;
+  margin-left: 13rem;
+  font-size: 3rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 10rem;
+}
+
+.margin-bottom {
+  margin-bottom: 4rem;
+}
+
+.category-heading {
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  text-align: center;
+  border: 1px solid rgb(211, 211, 211);
+  width: 143px;
+  height: 143px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+
+.category-name {
+  margin-top: 2rem;
+  margin-bottom: 20rem;
+}
+.img-background-hide {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .bannerHeading {
+    margin-left: 5rem;
+    font-size: 3rem;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin: 20px;
+  }
+  .card {
+    display: flex;
+    text-align: center;
+    border: 1px solid rgb(211, 211, 211);
+    width: 143px;
+    height: 143px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .category-name {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .img-background-hide {
+    display: flex;
+    flex-direction: column;
+    /* object-fit: contain; */
+    margin-top: 10rem;
+    margin-bottom: -10rem;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .background {
+    display: none;
+  }
+  .banner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bannerHeading {
+    margin-top: 8rem;
+    /* margin-left: 13rem; */
+    margin-left: 0;
+    font-size: 2.4rem;
+  }
+  .text-heading {
+    text-align: center;
+  }
+}

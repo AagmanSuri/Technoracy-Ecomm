@@ -8,23 +8,30 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
-    title: "You Can WIN",
-    author: "Shiv Khera",
+    title: "Case",
     price: "5000",
-    categoryName: "non-fiction",
+    rating: 5,
+    categoryName: "Cases & Protection"
   },
   {
     _id: uuid(),
     title: "You are Winner",
-    author: "Junaid Qureshi",
+    rating: 5,
     price: "3000",
-    categoryName: "horror",
+    categoryName: "Headphones"
   },
   {
     _id: uuid(),
     title: "Think and Grow Rich",
-    author: "Shiv Khera",
+    rating: 5,
     price: "1000",
-    categoryName: "fiction",
+    categoryName: "Laptops"
   },
+  {
+    _id: uuid(),
+    title: "Think and Grow Rich",
+    rating: 5,
+    price: "1000",
+    categoryName: "Smart watches"
+  }
 ];
