@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/Home.css";
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
       .then((response) => response.json())
       .then((db) => setData(db));
   }, []);
-
+  const navigate = useNavigate();
   return (
     <div className="container">
       <img
@@ -38,7 +39,7 @@ const Home = () => {
             <div
               key={item.id}
               onClick={() => {
-                console.log(item);
+                navigate("/product");
               }}
               className="center"
             >

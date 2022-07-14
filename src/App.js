@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mockman" element={<Mockman />} />
-        <Route path="product" element={<Product />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
         <Route
