@@ -38,11 +38,12 @@ hr {
 .card-container-product {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   /* justify-content: center; */
   /* align-items: center; */
   border: 1px solid rgb(211, 211, 211);
   /* min-width: 10rem; */
-  max-width: 15rem;
+  width: 14rem;
   margin: 1rem;
   justify-content: center;
   /* padding: 1rem; */
@@ -63,7 +64,9 @@ hr {
 }
 
 .card-image-product {
-  background-color: transparent;
-  height: auto;
+  object-fit: contain;
+  background-color: #dcdada;
+  height: 10rem;
+  padding: 1rem;
   width: auto;
 }

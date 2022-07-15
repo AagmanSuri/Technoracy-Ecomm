@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import "../css/Product.css";
 import { products as productDb } from "../backend/db/products";
 import { categories as categoriesDb } from "../backend/db/categories";
+import loading from "../Assets/loading.png";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const Product = () => {
   const [products, setProducts] = useState(productDb);
   const [categories, setCategories] = useState(categoriesDb);
+  const navigate = useNavigate();
   return (
     <div className="parent-container">
       <div className="option-panel">
@@ -26,7 +29,7 @@ const Product = () => {
 
           {categories.map((category) => {
             return (
-              <div className="label-filter">
+              <div key={category._id} className="label-filter">
                 <label>
                   <input type="checkbox" />
                   {category?.categoryName}
@@ -85,17 +88,18 @@ const Product = () => {
         <div className="card-products">
           {products?.map((product) => {
             return (
-              <div className="card-container-product">
+              <div
+                onClick={() => {
+                  navigate(`/product${product._id}`);
+                }}
+                key={product._id}
+                className="card-container-product"
+              >
                 <img
                   className="card-image-product"
-                  src={
-                    product.image
-                      ? product.image
-                      : // : "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
-                        "https://e7.pngegg.com/pngimages/321/641/png-clipart-iphone-5s-ios-progress-bar-icon-load-the-map-loading-miscellaneous-tshirt.png"
-                  }
+                  src={product.image ? product.image : loading}
                 ></img>
-                <h4> {product.title}</h4>
+                <h4>{product.title}</h4>
                 <h4>{product.price}</h4>
                 <h4>{product.rating}</h4>
                 <div>

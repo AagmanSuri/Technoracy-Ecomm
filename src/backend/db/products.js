@@ -33,7 +33,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    image: "",
+    image: "https://eaglestore.netlify.app/images/card-image2.avif",
     title: "Apple watch",
     rating: 5,
     price: "1000",
