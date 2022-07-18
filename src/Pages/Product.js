@@ -4,11 +4,24 @@ import { products as productDb } from "../backend/db/products";
 import { categories as categoriesDb } from "../backend/db/categories";
 import loading from "../Assets/loading.png";
 import { Link, useParams, useNavigate } from "react-router-dom";
-
+import star from "../Assets/star.png";
+import like from "../Assets/like.png";
+import unlike from "../Assets/unlike.png";
 const Product = () => {
   const [products, setProducts] = useState(productDb);
   const [categories, setCategories] = useState(categoriesDb);
+  const [isLike, setIsLike] = useState(unlike);
   const navigate = useNavigate();
+
+  const likeHandeler = (id) => {
+    console.log(id);
+    if (id === "349b1b6b-4f2e-46aa-b906-a2ae7dbb8411") {
+      setIsLike(like);
+    } else {
+      setIsLike(unlike);
+    }
+  };
+
   return (
     <div className="parent-container">
       <div className="option-panel">
@@ -88,23 +101,32 @@ const Product = () => {
         <div className="card-products">
           {products?.map((product) => {
             return (
-              <div
-                onClick={() => {
-                  navigate(`/product${product._id}`);
-                }}
-                key={product._id}
-                className="card-container-product"
-              >
+              <div key={product._id} className="card-container-product">
                 <img
+                  onClick={() => {
+                    navigate(`/product${product._id}`);
+                  }}
                   className="card-image-product"
                   src={product.image ? product.image : loading}
                 ></img>
-                <h4>{product.title}</h4>
-                <h4>{product.price}</h4>
-                <h4>{product.rating}</h4>
+                <button
+                  onClick={() => likeHandeler(product._id)}
+                  className="card-wishlist"
+                >
+                  <img className="image-card-wishlist" src={isLike}></img>
+                </button>
+                {product.type === "new" && <div className="new-tag">New</div>}
+                {product.type === "trending" && (
+                  <div className="trending-tag">Trending</div>
+                )}
+                <h3 className="card-text padding">{product.title}</h3>
+                <h4 className="card-text price-text">
+                  ₹{product.price}
+                  <span className="rating">{product.rating}</span>
+                  <img className="star" src={star}></img>
+                </h4>
                 <div>
-                  <button>Add to cart</button>
-                  <button>Add to wishlist</button>
+                  <button className="add-to-card-btn">Add to cart</button>
                 </div>
               </div>
             );
