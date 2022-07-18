@@ -26,7 +26,7 @@ export const categories = [
   },
   {
     _id: uuid(),
-    categoryName: "Tabs",
+    categoryName: "Phones/Tabs",
     categoryImage:
       "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/icon-product-ipad?wid=150&hei=150&fmt=png-alpha&.v=1544482382704"
   },

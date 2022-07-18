@@ -10,6 +10,7 @@ import RequiresAuth from "./Components/RequiresAuth";
 import { useAuth } from "./Context/authContext";
 import Wishlist from "./Pages/Private/Wishlist";
 import Navbar from "./Components/Navbar";
+import ProductPage from "./Pages/ProductPage";
 function App() {
   const { isLogin, setIsLogin } = useAuth();
 
@@ -19,9 +20,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mockman" element={<Mockman />} />
-        <Route path="product" element={<Product />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/product:id" element={<ProductPage />} />
         <Route
           path="/cart"
           element={
