@@ -13,7 +13,8 @@ export const products = [
     type: "trending",
     price: "500",
     rating: 5,
-    categoryName: "Cases & Protection"
+    categoryName: "Cases & Protection",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -23,7 +24,8 @@ export const products = [
     rating: 4,
     type: "trending",
     price: "3000",
-    categoryName: "Headphones"
+    categoryName: "Headphones",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -32,7 +34,8 @@ export const products = [
     rating: 5,
     price: "15000",
     type: "new",
-    categoryName: "Laptops"
+    categoryName: "Laptops",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -41,7 +44,8 @@ export const products = [
     rating: 5,
     price: "1000",
     type: "new",
-    categoryName: "Smart watches"
+    categoryName: "Smart watches",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -50,7 +54,8 @@ export const products = [
     rating: 5,
     price: "1000",
     type: "trending",
-    categoryName: "Smart watches"
+    categoryName: "Smart watches",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -59,7 +64,8 @@ export const products = [
     type: "trending",
     price: "500",
     rating: 5,
-    categoryName: "Cases & Protection"
+    categoryName: "Cases & Protection",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -69,7 +75,8 @@ export const products = [
     rating: 4,
     type: "trending",
     price: "3000",
-    categoryName: "Headphones"
+    categoryName: "Headphones",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -78,7 +85,8 @@ export const products = [
     rating: 5,
     price: "15000",
     type: "new",
-    categoryName: "Laptops"
+    categoryName: "Laptops",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -87,7 +95,8 @@ export const products = [
     rating: 5,
     price: "1000",
     type: "new",
-    categoryName: "Smart watches"
+    categoryName: "Smart watches",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -96,7 +105,8 @@ export const products = [
     rating: 5,
     price: "1000",
     type: "trending",
-    categoryName: "Smart watches"
+    categoryName: "Smart watches",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -105,7 +115,8 @@ export const products = [
     type: "trending",
     price: "500",
     rating: 5,
-    categoryName: "Cases & Protection"
+    categoryName: "Cases & Protection",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -115,7 +126,8 @@ export const products = [
     rating: 4,
     type: "trending",
     price: "3000",
-    categoryName: "Headphones"
+    categoryName: "Headphones",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -124,7 +136,8 @@ export const products = [
     rating: 5,
     price: "15000",
     type: "new",
-    categoryName: "Laptops"
+    categoryName: "Laptops",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -133,7 +146,8 @@ export const products = [
     rating: 5,
     price: "1000",
     type: "new",
-    categoryName: "Smart watches"
+    categoryName: "Smart watches",
+    wishlist: false
   },
   {
     _id: uuid(),
@@ -142,6 +156,7 @@ export const products = [
     rating: 5,
     price: "1000",
     type: "trending",
-    categoryName: "Smart watches"
+    categoryName: "Smart watches",
+    wishlist: false
   }
 ];

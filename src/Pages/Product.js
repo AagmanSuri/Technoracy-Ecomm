@@ -10,16 +10,20 @@ import unlike from "../Assets/unlike.png";
 const Product = () => {
   const [products, setProducts] = useState(productDb);
   const [categories, setCategories] = useState(categoriesDb);
-  const [isLike, setIsLike] = useState(unlike);
+  // const [isLike, setIsLike] = useState(false);
   const navigate = useNavigate();
 
   const likeHandeler = (id) => {
-    console.log(id);
-    if (id === "349b1b6b-4f2e-46aa-b906-a2ae7dbb8411") {
-      setIsLike(like);
-    } else {
-      setIsLike(unlike);
-    }
+    setProducts((products) => {
+      return products.map((product) => {
+        if (product._id === id) {
+          return { ...product, wishlist: !product.wishlist };
+        } else {
+          return product;
+        }
+      });
+    });
+    console.log(products);
   };
 
   return (
@@ -110,10 +114,13 @@ const Product = () => {
                   src={product.image ? product.image : loading}
                 ></img>
                 <button
-                  onClick={() => likeHandeler(product._id)}
+                  onClick={() => likeHandeler(product._id, product)}
                   className="card-wishlist"
                 >
-                  <img className="image-card-wishlist" src={isLike}></img>
+                  <img
+                    className="image-card-wishlist"
+                    src={product.wishlist ? like : unlike}
+                  ></img>
                 </button>
                 {product.type === "new" && <div className="new-tag">New</div>}
                 {product.type === "trending" && (
