@@ -11,6 +11,7 @@ import { useAuth } from "./Context/authContext";
 import Wishlist from "./Pages/Private/Wishlist";
 import Navbar from "./Components/Navbar";
 import ProductPage from "./Pages/ProductPage";
+import Signup from "./Pages/Signup";
 function App() {
   const { isLogin, setIsLogin } = useAuth();
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/mockman" element={<Mockman />} />
         <Route path="/product" element={<Product />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/product:id" element={<ProductPage />} />
         <Route
