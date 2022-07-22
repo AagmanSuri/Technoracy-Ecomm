@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/authContext";
+import { Link } from "react-router-dom";
+import "../css/login.css";
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -38,15 +40,35 @@ const Login = () => {
       console.log(error);
     }
   };
+
   console.log(isLogin);
+
   return (
-    <div>
-      <label>Email:</label>
-      <input type="email" />
-      <label>Password:</label>
-      <input type="password" />
-      {/* <button onClick={signupHandler}>Signup</button> */}
-      <button onClick={loginHandeler}>Login</button>
+    <div className="login-container">
+      <div className="login-card">
+        <div className="login">
+          <h1>Login</h1>
+        </div>
+        <label className="text email">Email:</label>
+        <input placeholder="aagman@gmail.com"className="input email-input" type="email" />
+        <label className="text password">Password:</label>
+        <input placeholder="*******" className="input password-input" type="password" />
+        <div className="btn-flex">
+          <button className="btn-login" onClick={loginHandeler}>
+            Login
+          </button>
+        </div>
+        <div className="btn-flex">
+          <button className="btn-login guest-login" onClick={loginHandeler}>
+            Login as guest
+          </button>
+        </div>
+        <div className="text-dec">
+          <span>
+            Don't have an Account ?{" "}<Link  className="sign-up" to="/signup">Sign up</Link>
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
